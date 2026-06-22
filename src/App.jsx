@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+// Stores category-specific guidance used to create the mock AI response.
 const categoryGuidance = {
   accessibility:
     "Focus on clear labels, readable formatting, keyboard access, and asking what accommodations would be most helpful.",
@@ -33,7 +33,7 @@ export default function App() {
     event.preventDefault();
 
     if (!question.trim()) {
-      setError("Please enter a question or concern before generating a response.");
+      setError("Please enter a question or concern before pressing 'Generate a Response.' ");
       setResponse("");
       return;
     }
