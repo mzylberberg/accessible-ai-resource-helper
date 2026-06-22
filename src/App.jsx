@@ -13,6 +13,7 @@ const categoryGuidance = {
 
 function buildMockResponse(question, category) {
   const cleanQuestion = question.trim();
+  // .trim removes extra spaces from the question. New command I havent used before. Documentating so I can practice and continue to use
   const guidance = categoryGuidance[category];
 
   return `Thanks for sharing this. A helpful first step is to restate the concern clearly: "${cleanQuestion}".
