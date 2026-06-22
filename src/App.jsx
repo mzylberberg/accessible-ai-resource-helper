@@ -125,3 +125,4 @@ export default function App() {
     </main>
   );
 }
+// User enters information > React stores it in state > User clicks button > Function processes input > React displays result
