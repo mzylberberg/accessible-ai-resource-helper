@@ -28,6 +28,9 @@ I built this project to practice the stack used in a frontend role that works wi
 - JavaScript
 - CSS
 
+- ## Project Configuration / Files
+- The `package.json` file lists the project dependencies, including React, React DOM, and Vite. It also defines scripts for running, building, and previewing the app.
+
 ## AI Integration Note
 
 This version uses mock response logic instead of a live Claude API call. In a production version, I would connect the form submission to a backend route that securely calls the Anthropic Claude API, then return the model response to the frontend.
