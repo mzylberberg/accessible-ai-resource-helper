@@ -36,7 +36,8 @@ I built this project to practice the stack used in a frontend role that works wi
 This version uses mock response logic instead of a live Claude API call. In a production version, I would connect the form submission to a backend route that securely calls the Anthropic Claude API, then return the model response to the frontend.
 
 ## Run Locally
-
+- Press "<>Code"
+- Press Run in Codespaces
 ```bash
 npm install
 npm run dev
