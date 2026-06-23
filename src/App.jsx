@@ -57,6 +57,19 @@ export default function App() {
     setCopyStatus("");
   }
 
+  async function handleCopyResponse() {
+  if (!response) {
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(response);
+    setCopyStatus("Response copied to clipboard.");
+  } catch {
+    setCopyStatus("Copy failed. Please highlight and copy the response manually.");
+  }
+}
+
   return (
     <main className="app-shell">
       <section className="intro">
