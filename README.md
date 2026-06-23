@@ -11,7 +11,7 @@ The app lets a user:
 
 ## Why I Built This
 
-I built this project to practice the stack used in a frontend role that works with React, Vite, and AI-assisted features. I focused on keeping the app small, readable, and accessible.
+I built this project to practice the stack used in a frontend role that works with React, Vite, and mock AI-assisted features. This version does not use a live AI API; instead, it uses mock response logic to simulate the user flow of an AI-powered feature. I focused on keeping the app small, readable, and accessible.
 
 ## Accessibility Details
 
