@@ -29,6 +29,10 @@ export default function App() {
   const [category, setCategory] = useState("accessibility");
   const [response, setResponse] = useState("");
   const [error, setError] = useState("");
+  const [copyStatus, setCopyStatus] = useState("");
+  
+  const characterCount = question.length;
+  //Adding a section for character count & copy feature 
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -36,10 +40,12 @@ export default function App() {
     if (!question.trim()) {
       setError("Please enter a question or concern before pressing 'Generate a Response.' ");
       setResponse("");
+      setCopyStatus("");
       return;
     }
 
     setError("");
+    setCopyStatus("");
     setResponse(buildMockResponse(question, category));
   }
 
@@ -48,6 +54,7 @@ export default function App() {
     setCategory("accessibility");
     setResponse("");
     setError("");
+    setCopyStatus("");
   }
 
   return (
@@ -90,11 +97,15 @@ export default function App() {
               placeholder="Example: I need help asking for a more accessible way to complete this task."
               aria-describedby={error ? "form-error" : "question-hint"}
             />
-            <p id="question-hint" className="hint">
-              Share one situation. The helper will create a supportive starting
-              point you can revise.
-            </p>
-          </div>
+              <div className="field-support">
+                <p id="question-hint" className="hint">
+                  Share one situation. The helper will create a supportive starting
+                  point you can revise.
+                </p>
+                <p className="character-count" aria-live="polite">
+                  {characterCount} characters
+                 </p>
+                </div>
 
           {error && (
             <p id="form-error" className="error-message" role="alert">
@@ -110,11 +121,28 @@ export default function App() {
           </div>
         </form>
 
+
         <aside className="response-panel" aria-live="polite">
-          <h2>Mock AI Response</h2>
-          {response ? (
-            <pre>{response}</pre>
-          ) : (
+          <div className="response-header">
+            <h2>Mock AI Response</h2>
+            <button
+              type="button"
+              className="secondary-button"
+              onClick={handleCopyResponse}
+              disabled={!response}
+            >
+          Copy
+        </button>
+      </div>
+
+  {response ? (
+    <>
+      <pre>{response}</pre>
+      {copyStatus && <p className="copy-status">{copyStatus}</p>}
+    </>
+  ) : (
+
+          
             <p className="empty-state">
               Your generated response will appear here after you complete the
               form.
