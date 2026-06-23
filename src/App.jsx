@@ -118,8 +118,8 @@ export default function App() {
                 <p className="character-count" aria-live="polite">
                   {characterCount} characters
                  </p>
-                </div>
-                </div>
+              </div>
+             </div>
 
           {error && (
             <p id="form-error" className="error-message" role="alert">
