@@ -29,15 +29,16 @@ I built this project to practice the stack used in a frontend role that works wi
 - CSS
 
 - ## Project Configuration / Files
-- The `package.json` file lists the project dependencies, including React, React DOM, and Vite. It also defines scripts for running, building, and previewing the app.
+- Comments cannot be made on .json files so I am inputting comments here: The `package.json` file lists the project dependencies, including React, React DOM, and Vite. It also defines scripts for running, building, and previewing the app. I also made this dev server accessible outside of just localhost, so Codespaces can expose it through the browser preview with --host 0.0.0.0
 
 ## AI Integration Note
 
 This version uses mock response logic instead of a live Claude API call. In a production version, I would connect the form submission to a backend route that securely calls the Anthropic Claude API, then return the model response to the frontend.
 
 ## Run Locally
-- Press "<>Code"
+- Go back to the parent folder -> Press "<>Code"
 - Press Run in Codespaces
+- In the terminal type below:
 ```bash
 npm install
 npm run dev
