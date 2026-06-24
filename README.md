@@ -29,7 +29,7 @@ I built this project to practice the stack used in a frontend role that works wi
 - CSS
 - HTML
 
-- ## Project Configuration / Files
+## Project Configuration / Files
 - Comments cannot be made on .json files so I am inputting comments here: The `package.json` file lists the project dependencies, including React, React DOM, and Vite. It also defines scripts for running, building, and previewing the app. I also made this dev server accessible outside of just localhost, so Codespaces can expose it through the browser preview with --host 0.0.0.0
 
 ## AI Integration Note
